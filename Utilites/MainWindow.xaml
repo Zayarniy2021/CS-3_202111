@@ -1,0 +1,60 @@
+﻿<Window x:Class="Utilites.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Utilites"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <TabControl Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3">
+            <TabItem Header="1">
+                <StackPanel Width="300" HorizontalAlignment="Left">
+                    <TextBlock>
+                        From
+                    </TextBlock>
+                    <TextBox x:Name="tbFrom"></TextBox>
+                    <TextBlock>
+                        To
+                    </TextBlock>
+                    <TextBox x:Name="tbTo"></TextBox>
+                    <TextBlock>
+                        Login
+                    </TextBlock>
+                    <TextBox x:Name="tbLogin"></TextBox>
+                    <TextBlock>
+                        Password
+                    </TextBlock>
+                    <PasswordBox x:Name="pbPassword" PasswordChar="*"></PasswordBox>
+                    <Button x:Name="btnSend" Width="200" HorizontalAlignment="Left" Click="BtnSend_Click">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="Send" />
+                            <Image Source="Images/Mail_64x.png" Width="50"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="1">
+                <StackPanel>
+
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="1">
+                <StackPanel>
+
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+
+</Window>

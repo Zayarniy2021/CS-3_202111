@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using System.Net.Mail;
 using System.Diagnostics;
 
+
 namespace MailSendTest
 {
-    class Program
+    public class Library
     {
-        static void Main(string[] args)
+
+        static public void MailSend()
         {
             // отправитель - устанавливаем адрес и отображаемое в письме имя
             MailAddress from = new MailAddress("somemail@gmail.com", "Tom");
@@ -27,7 +29,9 @@ namespace MailSendTest
             SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
             // логин и пароль
             Debug.WriteLine("Message has sent");
-            Console.Read();
+
         }
+
+
     }
 }

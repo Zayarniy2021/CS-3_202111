@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailSendTest", "MailSendTest\MailSendTest.csproj", "{6B30C50E-D98D-4BDE-B114-1F791CBA62AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailSendTest", "MailSendTest\MailSendTest.csproj", "{6B30C50E-D98D-4BDE-B114-1F791CBA62AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsDemo", "WinFormsDemo\WinFormsDemo.csproj", "{B13CBF3E-0931-4CEC-959C-02DE573C88F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilites", "Utilites\Utilites.csproj", "{5D25FF8C-3E5E-4F22-9559-6774673D2B25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{6B30C50E-D98D-4BDE-B114-1F791CBA62AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B30C50E-D98D-4BDE-B114-1F791CBA62AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B30C50E-D98D-4BDE-B114-1F791CBA62AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B13CBF3E-0931-4CEC-959C-02DE573C88F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B13CBF3E-0931-4CEC-959C-02DE573C88F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B13CBF3E-0931-4CEC-959C-02DE573C88F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B13CBF3E-0931-4CEC-959C-02DE573C88F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D25FF8C-3E5E-4F22-9559-6774673D2B25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D25FF8C-3E5E-4F22-9559-6774673D2B25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D25FF8C-3E5E-4F22-9559-6774673D2B25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D25FF8C-3E5E-4F22-9559-6774673D2B25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
