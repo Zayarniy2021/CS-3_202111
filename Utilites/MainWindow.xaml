@@ -6,6 +6,26 @@
         xmlns:local="clr-namespace:Utilites"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="test" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="ButtonBorder" CornerRadius="30" BorderThickness="1" BorderBrush="Gray" Background="LightGray">
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Background">
+                <Setter.Value>
+                    AliceBlue
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid ShowGridLines="False">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -18,27 +38,33 @@
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
         <TabControl Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3">
-            <TabItem Header="1">
+            <TabItem Header="Отправитель">
                 <StackPanel Width="300" HorizontalAlignment="Left">
                     <TextBlock>
                         From
                     </TextBlock>
-                    <TextBox x:Name="tbFrom"></TextBox>
+                    <TextBox x:Name="tbFrom">from@me.com</TextBox>
                     <TextBlock>
                         To
                     </TextBlock>
-                    <TextBox x:Name="tbTo"></TextBox>
+                    <TextBox x:Name="tbTo">to@you.com</TextBox>
                     <TextBlock>
                         Login
                     </TextBlock>
-                    <TextBox x:Name="tbLogin"></TextBox>
+                    <TextBox x:Name="tbLogin">geekbrains2021</TextBox>
                     <TextBlock>
                         Password
                     </TextBlock>
-                    <PasswordBox x:Name="pbPassword" PasswordChar="*"></PasswordBox>
-                    <Button x:Name="btnSend" Width="200" HorizontalAlignment="Left" Click="BtnSend_Click">
-                        <StackPanel Orientation="Horizontal" >
-                            <TextBlock Text="Send" />
+                    <PasswordBox x:Name="pbPassword" PasswordChar="*" Password="123456"></PasswordBox>
+                    <TextBox x:Name="tbSubject" >
+                        Subject
+                    </TextBox>
+                    <TextBlock Text="Body"/>
+                    <TextBox Height="100" AcceptsReturn="True" x:Name="tbBody">
+                    </TextBox>
+                    <Button x:Name="btnSend"  Click="BtnSend_Click" Style="{StaticResource test}">
+                        <StackPanel Orientation="Vertical" >
+                            <TextBlock Text="Send" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             <Image Source="Images/Mail_64x.png" Width="50"/>
                         </StackPanel>
                     </Button>

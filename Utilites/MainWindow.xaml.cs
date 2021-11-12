@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MailSendTest;
 
 namespace Utilites
 {
@@ -23,6 +24,11 @@ namespace Utilites
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void BtnSend_Click(object sender, RoutedEventArgs e)
+        {
+            Library.MailSend();
         }
     }
 }
