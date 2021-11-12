@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LibControls\LibControls.csproj" />
     <ProjectReference Include="..\MailSendTest\MailSendTest.csproj" />
   </ItemGroup>
 

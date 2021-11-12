@@ -31,7 +31,7 @@ namespace MailSendTest
             if (attachments!=null)
             {
 
-                foreach (var el in attachments)
+                foreach (object el in attachments)
                 {
                     System.Diagnostics.Debug.WriteLine(el.ToString());
                     Attachment attachment = new Attachment(el.ToString());

@@ -34,5 +34,26 @@ namespace Utilites
                 ss.Add((el as ListViewItem).Content.ToString());
             Library.MailSend(tbFrom.Text,tbTo.Text,tbSubject.Text,tbBody.Text,tbLogin.Text,pbPassword.Password,ss);
         }
+
+        private void FileInputBox_FileNameChanged(object sender, EventArgs e)
+        {
+            //System.Diagnostics.Debug.WriteLine(fibFileInput.FileName);
+        }
+
+        private void fibFileInput_FileNameChanged(object sender, RoutedEventArgs e)
+        {
+            //System.Diagnostics.Debug.WriteLine(fibFileInput.FileName);
+        }
+
+        private void Switcher_Next()
+        {
+            tcTabControl.SelectedIndex++;
+        }
+
+        private void Switcher_Prev()
+        {
+            tcTabControl.SelectedIndex--;
+        }
+
     }
 }

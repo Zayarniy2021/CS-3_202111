@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Utilites"
+        xmlns:LibControls="clr-namespace:LibControls;assembly=LibControls"  
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
@@ -37,7 +38,7 @@
             <RowDefinition Height="10*"/>
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
-        <TabControl Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3">
+        <TabControl Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3" TabIndex="1" x:Name="tcTabControl">
             <TabItem Header="Отправитель">
                 <StackPanel Width="300" HorizontalAlignment="Left">
                     <TextBlock>
@@ -60,7 +61,7 @@
                         Subject
                     </TextBox>
                     <TextBlock Text="Body"/>
-                    <TextBox Height="100" AcceptsReturn="True" x:Name="tbBody">
+                    <TextBox Height="100" AcceptsReturn="True" x:Name="tbBody" Background="Azure">
                     </TextBox>
                     <TextBlock>Attachments</TextBlock>
                     <ListView Height="40" x:Name="lvAttachments">
@@ -78,7 +79,8 @@
             </TabItem>
             <TabItem Header="1">
                 <StackPanel>
-
+                    <LibControls:FileInpBox  x:Name="fibFileInput"/>
+                    <Label Content="{Binding ElementName=fibFileInput, Path=FileName}"/>
                 </StackPanel>
             </TabItem>
             <TabItem Header="1">
