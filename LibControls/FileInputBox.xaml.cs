@@ -25,7 +25,7 @@ namespace LibControls
     public partial class FileInputBox : UserControl
     {
 
-     /*   public static readonly DependencyProperty FileNameProperty = DependencyProperty.Register("FileName", typeof(string), typeof(FileInputBox));
+        public static readonly DependencyProperty FileNameProperty = DependencyProperty.Register("FileName", typeof(string), typeof(FileInputBox));
 
         public static readonly RoutedEvent FileNameChangedEvent = EventManager.RegisterRoutedEvent("FileNameChanged", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(FileInputBox));
 
@@ -79,6 +79,6 @@ namespace LibControls
             if (oldContent != null)
                 throw new InvalidOperationException("You can't change Content!");
         }
-     */
+     
     }
 }

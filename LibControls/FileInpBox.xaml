@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
             x:Name="root">
     <DockPanel>
-        <Button x:Name="theButton"   DockPanel.Dock="Right" Click="theButton_Click">Browse...</Button>
-        <TextBox x:Name="theTextBox" Text="{Binding FileName,ElementName=root}" MinWidth="{Binding ActualWidth, ElementName=theButton}" Margin="0,0,2,0" />
+        <Button x:Name="theButton"   DockPanel.Dock="Right" Click="theButton_Click" Content="Browse..."/>
+        <TextBox x:Name="theTextBox" Text="{Binding FileName,ElementName=root,UpdateSourceTrigger=PropertyChanged}" MinWidth="{Binding ActualWidth, ElementName=theButton}" Margin="0,0,2,0" />
     </DockPanel>
 </UserControl>
