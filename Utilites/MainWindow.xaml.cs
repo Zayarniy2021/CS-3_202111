@@ -28,7 +28,11 @@ namespace Utilites
 
         private void BtnSend_Click(object sender, RoutedEventArgs e)
         {
-            Library.MailSend();
+            List<string> ss = new List<string>();
+            
+            foreach (var el in lvAttachments.Items)
+                ss.Add((el as ListViewItem).Content.ToString());
+            Library.MailSend(tbFrom.Text,tbTo.Text,tbSubject.Text,tbBody.Text,tbLogin.Text,pbPassword.Password,ss);
         }
     }
 }

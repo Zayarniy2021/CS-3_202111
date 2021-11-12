@@ -43,15 +43,15 @@
                     <TextBlock>
                         From
                     </TextBlock>
-                    <TextBox x:Name="tbFrom">from@me.com</TextBox>
+                    <TextBox x:Name="tbFrom">zaazaa@yandex.ru</TextBox>
                     <TextBlock>
                         To
                     </TextBlock>
-                    <TextBox x:Name="tbTo">to@you.com</TextBox>
+                    <TextBox x:Name="tbTo">zaazaa@yandex.ru</TextBox>
                     <TextBlock>
                         Login
                     </TextBlock>
-                    <TextBox x:Name="tbLogin">geekbrains2021</TextBox>
+                    <TextBox x:Name="tbLogin">zaazaa@yandex.ru</TextBox>
                     <TextBlock>
                         Password
                     </TextBlock>
@@ -62,10 +62,16 @@
                     <TextBlock Text="Body"/>
                     <TextBox Height="100" AcceptsReturn="True" x:Name="tbBody">
                     </TextBox>
+                    <TextBlock>Attachments</TextBlock>
+                    <ListView Height="40" x:Name="lvAttachments">
+                        <ListViewItem>d:\temp\1.txt</ListViewItem>
+                        <ListViewItem>d:\temp\1.txt</ListViewItem>
+                        <ListViewItem>d:\temp\1.txt</ListViewItem>
+                    </ListView>
                     <Button x:Name="btnSend"  Click="BtnSend_Click" Style="{StaticResource test}">
                         <StackPanel Orientation="Vertical" >
                             <TextBlock Text="Send" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            <Image Source="Images/Mail_64x.png" Width="50"/>
+                            <Image Source="Images/Mail_64x.png" Width="20"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>
