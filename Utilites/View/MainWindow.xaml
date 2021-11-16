@@ -4,9 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Utilites"
+         xmlns:vm="clr-namespace:Utilites.ViewModel"
         xmlns:LibControls="clr-namespace:LibControls;assembly=LibControls"  
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <vm:ViewModel x:Name="mainViewModel"/>
+    </Window.DataContext>
     <Window.Resources>
         <Style x:Key="test" TargetType="Button">
             <Setter Property="Template">
@@ -39,7 +43,16 @@
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
         <TabControl Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3" SelectedIndex="1" x:Name="tcTabControl">
-            <TabItem Header="Отправитель">
+            <TabItem Header="Доступ" TabIndex="0" IsSelected="True">
+                <StackPanel>
+                    <TextBlock>Login</TextBlock>
+                <TextBox x:Name="tbAccessLogin" Text="{Binding Login, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                    <TextBlock>Password</TextBlock>
+                    <TextBox x:Name="tbAccessPassword" Text="{Binding Password, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                    <Button Content="Log In" Command="{Binding AccessCommand}" CommandParameter="{Binding ElementName=tcTabControl}"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Отправитель" IsEnabled="False">
                 <StackPanel Width="300" HorizontalAlignment="Left">
                     <TextBlock>
                         From
@@ -77,14 +90,14 @@
                     </Button>
                 </StackPanel>
             </TabItem>
-            <TabItem Header="1">
+            <TabItem Header="1" IsEnabled="False">
                 <StackPanel>
                     <LibControls:FileInputBox  x:Name="fibFileInput" FileName="C:\Temp"/>
                     <Label Content="{Binding ElementName=fibFileInput, Path=FileName}"/>
                     
                 </StackPanel>
             </TabItem>
-            <TabItem Header="1">
+            <TabItem Header="1" IsEnabled="False">
                 <StackPanel>
 
                 </StackPanel>

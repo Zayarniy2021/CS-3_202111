@@ -13,4 +13,8 @@
     <ProjectReference Include="..\MailSendTest\MailSendTest.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+
 </Project>

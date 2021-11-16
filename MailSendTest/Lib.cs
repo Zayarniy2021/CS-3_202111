@@ -13,6 +13,12 @@ namespace MailSendTest
     public class Library
     {
 
+        public static bool Check(string login,string password)
+        {
+            if (login == "admin" && password == "admin") return true;
+            return false;
+        }
+
         static public void MailSend(string _from, string _to, string _subject, string _body, string _login,string _password, IEnumerable attachments=null)
         {
             // отправитель - устанавливаем адрес и отображаемое в письме имя
