@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using MailSendTest;
 
@@ -26,6 +28,21 @@ namespace Utilites.ViewModel
                 }
             }
         }
+
+        string _from = "from";
+        public string From
+        {
+            get { return _from; }
+            set
+            {
+                if (_from != value)
+                {
+                    _from = value;
+                    PropertyChanged.Invoke(this, new PropertyChangedEventArgs("From"));
+                    System.Diagnostics.Debug.WriteLine("From is changed:" + _from);
+                }
+            }
+        }
         public string Password { get; set; } = "Admin";
 
         public ICommand AccessCommand
@@ -36,6 +53,8 @@ namespace Utilites.ViewModel
                 return new DelegateCommand(Execute);
             }
         }
+
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -54,10 +73,9 @@ namespace Utilites.ViewModel
                 foreach (var el in tabControl.Items)
                     (el as System.Windows.Controls.TabItem).IsEnabled = true;
             }
-
-
-
         }
+
+
 
     }
 }

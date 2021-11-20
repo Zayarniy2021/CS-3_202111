@@ -52,12 +52,21 @@
                     <Button Content="Log In" Command="{Binding AccessCommand}" CommandParameter="{Binding ElementName=tcTabControl}"/>
                 </StackPanel>
             </TabItem>
-            <TabItem Header="Отправитель" IsEnabled="False">
+            <TabItem Header="Отправитель" IsEnabled="True">
                 <StackPanel Width="300" HorizontalAlignment="Left">
                     <TextBlock>
                         From
                     </TextBlock>
-                    <TextBox x:Name="tbFrom">zaazaa@yandex.ru</TextBox>
+                    <TextBox x:Name="tbFrom" Validation.Error="tbFrom_Error">
+                        <TextBox.Text>
+                            <Binding Path="From" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" NotifyOnValidationError="True" >
+                                <Binding.ValidationRules>
+                                    <vm:EMailValidationRule/>
+                                </Binding.ValidationRules>
+                            </Binding>
+                            
+                        </TextBox.Text>
+                    </TextBox>
                     <TextBlock>
                         To
                     </TextBlock>
@@ -82,7 +91,7 @@
                         <ListViewItem>d:\temp\1.txt</ListViewItem>
                         <ListViewItem>d:\temp\1.txt</ListViewItem>
                     </ListView>
-                    <Button x:Name="btnSend"  Click="BtnSend_Click" Style="{StaticResource test}">
+                    <Button x:Name="btnSend" CommandManager.CanExecute="btnSend_CanExecute" Style="{StaticResource test}" Click="BtnSend_Click">
                         <StackPanel Orientation="Vertical" >
                             <TextBlock Text="Send" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             <Image Source="Images/Mail_64x.png" Width="20"/>

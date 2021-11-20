@@ -55,5 +55,33 @@ namespace Utilites
             tcTabControl.SelectedIndex--;
         }
 
+        private void tbFrom_Error(object sender, ValidationErrorEventArgs e)
+        {
+            if (e.Action==ValidationErrorEventAction.Added)
+            {
+                ((Control)sender).ToolTip = e.Error.ErrorContent.ToString();
+            }
+            else
+            if (e.Action == ValidationErrorEventAction.Removed)
+            {
+               ((Control)sender).ToolTip = "";
+            }
+        }
+
+        private void btnSend_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = IsValid(sender as DependencyObject);
+        }
+
+
+        private bool IsValid(DependencyObject obj)
+        {
+            // The dependency object is valid if it has no errors and all
+            // of its children (that are dependency objects) are error-free.
+            return !Validation.GetHasError(obj) &&
+            LogicalTreeHelper.GetChildren(obj)
+            .OfType<DependencyObject>()
+            .All(IsValid);
+        }
     }
 }
