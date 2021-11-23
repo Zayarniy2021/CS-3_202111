@@ -9,24 +9,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\2groups.ico" />
-    <None Remove="Images\Bookmark-Folder.ico" />
-    <None Remove="Images\cache.png" />
-    <None Remove="Images\clock.png" />
-    <None Remove="Images\groups.ico" />
-    <None Remove="Images\library.ico" />
-    <None Remove="Images\mailreminder.png" />
-    <None Remove="Images\Mail_64x.png" />
-    <None Remove="Images\Mimetypes-application-vnd-oasis-opendocument-text.ico" />
-    <None Remove="Images\Move Next %28Arrow%29 Green64.png" />
-    <None Remove="Images\Move Previous %28Arrow%29 Green64.png" />
-    <None Remove="Images\New Add64.png" />
-    <None Remove="Images\New Edit64.png" />
-    <None Remove="Images\New Remove64.png" />
-    <None Remove="Images\outbox1.png" />
-    <None Remove="Images\schedule.ico" />
-    <None Remove="Images\settings.ico" />
-    <None Remove="Images\stat.ico" />
+    <None Remove="View\Images\2groups.ico" />
+    <None Remove="View\Images\Bookmark-Folder.ico" />
+    <None Remove="View\Images\cache.png" />
+    <None Remove="View\Images\clock.png" />
+    <None Remove="View\Images\groups.ico" />
+    <None Remove="View\Images\library.ico" />
+    <None Remove="View\Images\mailreminder.png" />
+    <None Remove="View\Images\Mail_64x.png" />
+    <None Remove="View\Images\Mimetypes-application-vnd-oasis-opendocument-text.ico" />
+    <None Remove="View\Images\Move Next %28Arrow%29 Green64.png" />
+    <None Remove="View\Images\Move Previous %28Arrow%29 Green64.png" />
+    <None Remove="View\Images\New Add64.png" />
+    <None Remove="View\Images\New Edit64.png" />
+    <None Remove="View\Images\New Remove64.png" />
+    <None Remove="View\Images\outbox1.png" />
+    <None Remove="View\Images\schedule.ico" />
+    <None Remove="View\Images\settings.ico" />
+    <None Remove="View\Images\stat.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,24 +39,24 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\2groups.ico" />
-    <Resource Include="Images\Bookmark-Folder.ico" />
-    <Resource Include="Images\cache.png" />
-    <Resource Include="Images\clock.png" />
-    <Resource Include="Images\groups.ico" />
-    <Resource Include="Images\library.ico" />
-    <Resource Include="Images\mailreminder.png" />
-    <Resource Include="Images\Mail_64x.png" />
-    <Resource Include="Images\Mimetypes-application-vnd-oasis-opendocument-text.ico" />
-    <Resource Include="Images\Move Next (Arrow) Green64.png" />
-    <Resource Include="Images\Move Previous (Arrow) Green64.png" />
-    <Resource Include="Images\New Add64.png" />
-    <Resource Include="Images\New Edit64.png" />
-    <Resource Include="Images\New Remove64.png" />
-    <Resource Include="Images\outbox1.png" />
-    <Resource Include="Images\schedule.ico" />
-    <Resource Include="Images\settings.ico" />
-    <Resource Include="Images\stat.ico" />
+    <Resource Include="View\Images\2groups.ico" />
+    <Resource Include="View\Images\Bookmark-Folder.ico" />
+    <Resource Include="View\Images\cache.png" />
+    <Resource Include="View\Images\clock.png" />
+    <Resource Include="View\Images\groups.ico" />
+    <Resource Include="View\Images\library.ico" />
+    <Resource Include="View\Images\mailreminder.png" />
+    <Resource Include="View\Images\Mail_64x.png" />
+    <Resource Include="View\Images\Mimetypes-application-vnd-oasis-opendocument-text.ico" />
+    <Resource Include="View\Images\Move Next (Arrow) Green64.png" />
+    <Resource Include="View\Images\Move Previous (Arrow) Green64.png" />
+    <Resource Include="View\Images\New Add64.png" />
+    <Resource Include="View\Images\New Edit64.png" />
+    <Resource Include="View\Images\New Remove64.png" />
+    <Resource Include="View\Images\outbox1.png" />
+    <Resource Include="View\Images\schedule.ico" />
+    <Resource Include="View\Images\settings.ico" />
+    <Resource Include="View\Images\stat.ico" />
   </ItemGroup>
 
 </Project>

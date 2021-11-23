@@ -42,6 +42,8 @@
             <RowDefinition Height="10*"/>
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
+        <LibControls:TabSwitcher HorizontalAlignment="Left" Margin="42,0,0,0" VerticalAlignment="Center" btnPreviousClick="TabSwitcher_btnPreviousClick"/>
+
         <TabControl Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3" SelectedIndex="1" x:Name="tcTabControl">
             <TabItem Header="Доступ" TabIndex="0" IsSelected="True">
                 <StackPanel>
@@ -112,6 +114,7 @@
                 </StackPanel>
             </TabItem>
         </TabControl>
+       
     </Grid>
 
 </Window>

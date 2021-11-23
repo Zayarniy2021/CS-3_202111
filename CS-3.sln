@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibControls", "LibControls\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{BAB19150-95B5-419C-B511-3FB9E7ADB98B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestForSumExample", "UnitTestForSumExample\UnitTestForSumExample.csproj", "{A4C16ADF-FE87-4F6F-B47E-DD5C31EB7456}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestForSumExample", "UnitTestForSumExample\UnitTestForSumExample.csproj", "{A4C16ADF-FE87-4F6F-B47E-DD5C31EB7456}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumExampleForUnitTests", "SumExampleForUnitTests\SumExampleForUnitTests.csproj", "{C5AE1FF2-CA2B-4ECD-AF54-D7ED7FAB49EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumExampleForUnitTests", "SumExampleForUnitTests\SumExampleForUnitTests.csproj", "{C5AE1FF2-CA2B-4ECD-AF54-D7ED7FAB49EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "040. TabSwitcher - RoutedEvents And DependencyProperty for homework", "TabSwitcher1 - for homework\040. TabSwitcher - RoutedEvents And DependencyProperty for homework.csproj", "{0DAC5A7B-B1B3-4E21-B38D-6614B0D318DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{C5AE1FF2-CA2B-4ECD-AF54-D7ED7FAB49EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5AE1FF2-CA2B-4ECD-AF54-D7ED7FAB49EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5AE1FF2-CA2B-4ECD-AF54-D7ED7FAB49EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DAC5A7B-B1B3-4E21-B38D-6614B0D318DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DAC5A7B-B1B3-4E21-B38D-6614B0D318DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DAC5A7B-B1B3-4E21-B38D-6614B0D318DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DAC5A7B-B1B3-4E21-B38D-6614B0D318DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
