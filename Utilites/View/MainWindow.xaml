@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Utilites"
          xmlns:vm="clr-namespace:Utilites.ViewModel"
         xmlns:LibControls="clr-namespace:LibControls;assembly=LibControls"  
+          xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.DataContext>
@@ -42,9 +43,15 @@
             <RowDefinition Height="10*"/>
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
-        <LibControls:TabSwitcher HorizontalAlignment="Left" Margin="42,0,0,0" VerticalAlignment="Center" btnPreviousClick="TabSwitcher_btnPreviousClick"/>
+        <LibControls:TabSwitcher HorizontalAlignment="Left" Margin="42,0,0,0" VerticalAlignment="Center" btnPreviousClick="TabSwitcher_btnPreviousClick">
+            <b:Interaction.Triggers>
+                <b:EventTrigger EventName="btnPreviousClick">
+                    <b:InvokeCommandAction Command="{Binding Path=PrevTab}" CommandParameter="{Binding ElementName=tcTabControl}"/>
+                </b:EventTrigger>
+            </b:Interaction.Triggers>
+        </LibControls:TabSwitcher>
 
-        <TabControl Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3" SelectedIndex="1" x:Name="tcTabControl">
+        <TabControl Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3" SelectedIndex="{Binding TabControlIndex}" x:Name="tcTabControl" Tag="{}">
             <TabItem Header="Доступ" TabIndex="0" IsSelected="True">
                 <StackPanel>
                     <TextBlock>Login</TextBlock>
@@ -113,6 +120,11 @@
 
                 </StackPanel>
             </TabItem>
+            <TabItem Header="1" IsEnabled="False">
+                <StackPanel>
+
+                </StackPanel>
+            </TabItem>            
         </TabControl>
        
     </Grid>

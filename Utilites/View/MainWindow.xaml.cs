@@ -86,7 +86,7 @@ namespace Utilites
 
         private void TabSwitcher_btnPreviousClick(object sender, RoutedEventArgs e)
         {
-            if (tcTabControl.SelectedIndex != 0) tcTabControl.SelectedIndex--; else tcTabControl.SelectedIndex = tcTabControl.Items.Count - 1;
+            //if (tcTabControl.SelectedIndex != 0) tcTabControl.SelectedIndex--; else tcTabControl.SelectedIndex = tcTabControl.Items.Count - 1;
         }
     }
 }

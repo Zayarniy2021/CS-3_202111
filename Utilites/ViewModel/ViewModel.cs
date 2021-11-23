@@ -56,6 +56,44 @@ namespace Utilites.ViewModel
 
 
 
+
+
+        private int tabControlIndex = 0;
+
+        public int TabControlIndex
+        {
+            get
+            {
+                return tabControlIndex;
+            }
+            set
+            {
+                if (tabControlIndex != value)
+                {
+                    tabControlIndex = value;
+                    Console.WriteLine("Invoke");
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("TabControlIndex"));
+                }
+            }
+        }
+
+        public ICommand PrevTab
+        {
+            get
+            {
+                return new DelegateCommand((obj) =>
+                {
+                    //System.Diagnostics.Debug.WriteLine(obj.ToString());
+                    TabControlIndex = TabControlIndex == 0 ? (obj as TabControl).Items.Count-1 : --TabControlIndex;                    
+
+                },
+                (obj) => true);
+            }
+        }
+
+
+
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void Execute(object obj)
@@ -74,6 +112,8 @@ namespace Utilites.ViewModel
                     (el as System.Windows.Controls.TabItem).IsEnabled = true;
             }
         }
+
+
 
 
 

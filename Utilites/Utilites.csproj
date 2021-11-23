@@ -39,6 +39,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="View\Images\2groups.ico" />
     <Resource Include="View\Images\Bookmark-Folder.ico" />
     <Resource Include="View\Images\cache.png" />
